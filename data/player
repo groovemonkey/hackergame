@@ -41,10 +41,8 @@
 :focus 10
 
 ;; tasks
-tasks {
+:tasks {
 :current "none"
 :queued []
 }
-
-
 }

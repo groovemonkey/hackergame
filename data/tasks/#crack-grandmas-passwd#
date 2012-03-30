@@ -27,7 +27,7 @@
 ;; equipment requirements, in the format "equipment class name" --> level
 ;; (because we check for class/level most of the time)
 ;; non-required stuff does NOT have to be listed as "0".
-:required-equipment {
+:equipment-required {
 ;;;;;;;;;;;;;;;;
 :computer 1
 

@@ -1,5 +1,6 @@
 ROADMAP:
 week 1: game mechanics/prototype
+
 week 2: polishing, finish basic game files (data -- equipment etc.)
 week 3: HTML GUI design through WebNoir.
 
@@ -23,25 +24,17 @@ MAIN LOOP:
      -display task queue
      -display player equipment
      -display player skills (along with "train" button next to each skill, which runs the "training" task for that skill -- a generated task with energy/$/time costs based on current skill level).
+     -take input from player, execute commands
 
 #########################
 Game Mechanics Needed (functions)
 
 *EQUIPMENT
 
-**List Available Equipment
--list equipment based on equipment level (+1 level, greyed out).  Show selectable equipment based on required level, $, Focus, and Skills.
-
-** View Specific Equipment (by clicking on an available piece of equipment)
--show equipment description, requirements (if any), attributes, cost
-
-** Buy Equipment (by choosing "Buy" from the description menu)
--deduct $ and energy from player's stats, add equipment to player's equipment inventory under the proper category (computer, interface, security, etc)
-
+DONE!
 
 ###################################
 ###################################
-
 *TASKS
 
 ** Show Available Tasks
@@ -64,3 +57,20 @@ Game Mechanics Needed (functions)
 -calculate needed time
 -countdown to completion (hackpoints needed, player hack rate), while showing status bar/percentage
 -on completion, pay out appropriate $ and skillpoints, along with bonus (based on player bonus multiplier)
+
+
+###
+DONE:
+
+** Buy Equipment (by choosing "Buy" from the description menu)
+-deduct $ and energy from player's stats, add equipment to player's equipment inventory under the proper category (computer, interface, security, etc)
+
+** Load player and equipment files into memory. (in player.clj and equipment.clj)
+
+** Load task files into memory (in tasks.clj).
+
+** View Specific Equipment (by clicking on an available piece of equipment)
+-show equipment description, requirements (if any), attributes, cost
+
+**List Available Equipment (TODO: test)
+-list equipment based on equipment level (+1 level, greyed out).  Show selectable equipment based on required level, $, Focus, and Skills.
