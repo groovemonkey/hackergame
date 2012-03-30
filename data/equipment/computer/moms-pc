@@ -1,0 +1,23 @@
+{
+:description "Your dear mother's computer, which you're allowed to use while she's out working the bars. It's old and covered in coffee (you hope) stains, and the SPACE key doesn't work. You suppose it will do the job...for now."
+
+:type "computer"
+:level 0
+:price 0
+
+;; compute/defense attributes
+:compute-speed 1
+:defense-value 0
+
+
+;; requirements
+:hideout-required "none"
+:player-level-required 0
+:skills-required "none"
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 5
+:task-bonuses {cracking-grandmas-passwd 10}
+
+}

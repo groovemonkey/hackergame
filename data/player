@@ -1,0 +1,50 @@
+{
+;; general info
+:name "Mr. Anderson"
+:hacker-alias "Neo"
+:background-story "You come from a long line of male prostitutes, once an honored family but now fallen from grace. The first in six generations to learn how to read, you've decided to give up the life of the night, and turn your attention to computers. Who knows what fame and fortune -- and discoveries -- might await?  Well, I do.  Because I'm writing this game."
+
+
+;;hacker-level needed?  Maybe just calculate from total-points?
+:hacker-level 0
+:total-points 0
+:focus-recharge-rate 10
+
+;; equipment that the player has
+:equipment-owned {
+;;;;;;;;;;;;;;;;
+:computer []
+:interface []
+:augmentation []
+:hideout []
+:security-network []
+:security-physical []
+;;;;;;;;;;;;;;;;
+}
+
+;; skills
+:skills {
+;;;;;;;;;;;;;;;;
+:programming 0
+:cracking 0
+:evasion 0
+:underworld-connections 0
+:anonymity 0
+:network-tech 0
+:social-engineering 0
+
+;;;;;;;;;;;;;;;;
+}
+
+;; currencies
+:money 100
+:focus 10
+
+;; tasks
+tasks {
+:current "none"
+:queued []
+}
+
+
+}

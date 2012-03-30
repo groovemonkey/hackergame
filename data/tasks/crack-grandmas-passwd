@@ -1,0 +1,40 @@
+{
+:description "Some little grandlady somewhere is in for a big surprise.  To hone your cracking skills, you're going to steal her credentials and log into her computer.  Let's see what internet videos have been keeping granny up so late at night!"
+
+;; minimum player level for task
+:task-level 0
+
+;; currency costs for this task
+:money-cost 0
+:focus-cost 10
+:hack-points 10
+
+;; rewards
+:payout-cash 50
+:payout-skillpoints {
+:cracking 20
+}
+:payout-bonus 5
+
+;; requirements
+:required-skills {
+;;;;;;;;;;;;;;;;
+:cracking 1
+:social-engineering 1
+;;;;;;;;;;;;;;;;
+}
+
+;; equipment requirements, in the format "equipment class name" --> level
+;; (because we check for class/level most of the time)
+;; non-required stuff does NOT have to be listed as "0".
+:required-equipment {
+;;;;;;;;;;;;;;;;
+:computer 1
+
+;; specific equipment requirements (by name) in a vector below
+:specifically [:moms-pc]
+;;;;;;;;;;;;;;;;
+}
+
+
+}
