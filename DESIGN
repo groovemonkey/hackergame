@@ -18,23 +18,15 @@ Game Code Structure:
 
 game start: read tasks, equipment, player file.
 while selection is not QUIT:
-MAIN LOOP:
-     -display player stats
+MAIN LOOP Stuff Still Needed:
      -display current task, calculate remaining time/percent
      -display task queue
-     -display player equipment
-     -display player skills (along with "train" button next to each skill, which runs the "training" task for that skill -- a generated task with energy/$/time costs based on current skill level).
+     -"train" button next to each skill, which runs the "training" task for that skill -- a generated task with energy/$/time costs based on current skill level).
      -take input from player, execute commands
 
 #########################
 Game Mechanics Needed (functions)
 
-*EQUIPMENT
-
-DONE!
-
-###################################
-###################################
 *TASKS
 
 ** Show Available Tasks
@@ -61,7 +53,9 @@ DONE!
 
 ###
 DONE:
-
+################
+DAY 1
+################
 ** Buy Equipment (by choosing "Buy" from the description menu)
 -deduct $ and energy from player's stats, add equipment to player's equipment inventory under the proper category (computer, interface, security, etc)
 
@@ -74,3 +68,11 @@ DONE:
 
 **List Available Equipment (TODO: test)
 -list equipment based on equipment level (+1 level, greyed out).  Show selectable equipment based on required level, $, Focus, and Skills.
+
+
+###########
+DAY 2:
+###########
+-display player equipment
+-display player skills
+-display player stats

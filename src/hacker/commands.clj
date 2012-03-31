@@ -62,14 +62,52 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
     (view-equipment-item-details item))))
 
 
+(defn list-player-owned-equipment
+  "display a list of user-owned equipment."
+  [player]
+  (println "\n\nEquipment You Own:\n"
+           ;;map a function that displays each item in the type-list,
+           ;;along with the type's name.  TODO: make pretty
+           (map #(println %":") (player :equipment-owned))))
+
+
+
+(defn list-player-skills
+  "display a list of user skills."
+  [player]
+  (println "\n\nYour Skills:\n"
+           ;;map a function that displays each item in the type-list,
+           ;;along with the type's name.  TODO: make pretty
+           (map #(println %":") (player :skills))))  
+
+
 ;commands we still need for the prototype:
 
 ;inventory-menu: view own equipment
 ;---view specific class of equipment (comp, augment, sec, etc)
-;---view specific item
 
 ;view tasks (current queue)
 ;---remove tasks from queue
 ;new task (available tasks)
 ;choose task (queue an available task)
 
+
+
+;;;;;;;;;;;;;;;;; GUI/Main Loop FUNCTIONS ;;;;;;;;;;;;;;;;;
+; current task (with time remaining/%)
+
+  (defn displaystats
+    "Display User Statistics"
+    [player]
+    (println "Your Stats:\n"
+             "Hacker Level:"(player :hacker-level) ;;TODO: calculate from
+             ;;total points here?
+             "\nTotal Points:"(player :total-points)
+             "\nMoney:"(player :money)
+             "\nFocus:"(player :focus) ;; TODO: Calculate max focus here?
+             "\nFocus Recharge Rate:"(player :focus-recharge-rate)
+             "\n\n"(list-player-owned-equipment player)
+             "\n\n"(list-player-skills player)
+             ;;TODO show task list here (or just current task)
+             ))
+             
