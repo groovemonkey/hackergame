@@ -1,0 +1,78 @@
+ROADMAP:
+week 1: game mechanics/prototype
+
+week 2: polishing, finish basic game files (data -- equipment etc.)
+week 3: HTML GUI design through WebNoir.
+
+RELEASE 1: the original idea -- compact, working, somewhat balanced and playable.
+
+##########################
+
+Files:
+~/data/player - skills/equipment/cash -- current state of the player's game
+~/data/equipment - all purchase-able equipment, split into categories
+~/data/tasks - all available tasks.  "skill training" tasks are programmatically generated in-game, so no data files are needed for them.
+
+##########################
+Game Code Structure:
+
+game start: read tasks, equipment, player file.
+while selection is not QUIT:
+MAIN LOOP Stuff Still Needed:
+     -display current task, calculate remaining time/percent
+     -display task queue
+     -"train" button next to each skill, which runs the "training" task for that skill -- a generated task with energy/$/time costs based on current skill level).
+     -take input from player, execute commands
+
+#########################
+Game Mechanics Needed (functions)
+
+*TASKS
+
+** Show Available Tasks
+-list doable tasks based on task level (+1 level, greyed out).  Show selectable tasks based on required level, $, Focus, Equipment, Skills.
+
+** View a Task (by clicking on an available task)
+-show task description, requirements, rewards, cost
+
+** Select a task (by choosing to perform that task in the task description menu)
+-if there's no active task running, make the task active.  Otherwise, add the task to the end of the player's task queue -- verify skills/equipment are met, otherwise return an error explaining why this task isn't doable yet.
+
+** Task Queue Management
+-view the whole queue, in its own GUI window
+-select tasks from the queue to view task details (same as from main menu)
+-view total estimated $$/Skill-points from completing ALL tasks in queue
+-remove tasks from queue
+
+**Run tasks (active task)
+-when a task is moved to the "active" position, remove it from the queue and charge the player appropriate energy and cash
+-calculate needed time
+-countdown to completion (hackpoints needed, player hack rate), while showing status bar/percentage
+-on completion, pay out appropriate $ and skillpoints, along with bonus (based on player bonus multiplier), remove task from front of queue
+
+
+###
+DONE:
+################
+DAY 1
+################
+** Buy Equipment (by choosing "Buy" from the description menu)
+-deduct $ and energy from player's stats, add equipment to player's equipment inventory under the proper category (computer, interface, security, etc)
+
+** Load player and equipment files into memory. (in player.clj and equipment.clj)
+
+** Load task files into memory (in tasks.clj).
+
+** View Specific Equipment (by clicking on an available piece of equipment)
+-show equipment description, requirements (if any), attributes, cost
+
+**List Available Equipment (TODO: test)
+-list equipment based on equipment level (+1 level, greyed out).  Show selectable equipment based on required level, $, Focus, and Skills.
+
+
+###########
+DAY 2:
+###########
+-display player equipment
+-display player skills
+-display player stats

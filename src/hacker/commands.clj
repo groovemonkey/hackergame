@@ -62,13 +62,21 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
     (view-equipment-item-details item))))
 
 
-(defn list-player-owned-equipment
+(defn old-list-player-owned-equipment
   "display a list of user-owned equipment."
   [player]
   (println "\n\nEquipment You Own:\n"
            ;;map a function that displays each item in the type-list,
-           ;;along with the type's name.  TODO: make pretty
+           ;;along with the type's name.
            (map #(println %":") (player :equipment-owned))))
+(defn list-player-owned-equipment
+  "display a list of user-owned equipment.  Use map Destructuring."
+  [{:keys [equipment-owned] :as player-map}]
+  (do
+    (println "\n\nEquipment You Own:\n")
+           (doseq [type equipment-owned]
+             (println type ":" (:values type)))))
+
 
 
 
