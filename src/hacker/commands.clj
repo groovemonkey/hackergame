@@ -92,30 +92,8 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
 ;commands we still need for the prototype:
 
 ;inventory-menu: view own equipment
-;---view specific class of equipment (comp, augment, sec, etc)
-
+;---view specific class of equipment (comp, aug, sec, etc)
 ;view tasks (current queue)
 ;---remove tasks from queue
 ;new task (available tasks)
 ;choose task (queue an available task)
-
-
-
-;;;;;;;;;;;;;;;;; GUI/Main Loop FUNCTIONS ;;;;;;;;;;;;;;;;;
-; current task (with time remaining/%)
-
-  (defn displaystats
-    "Display User Statistics"
-    [player]
-    (println "Your Stats:\n"
-             "Hacker Level:"(player :hacker-level) ;;TODO: calculate from
-             ;;total points here?
-             "\nTotal Points:"(player :total-points)
-             "\nMoney:"(player :money)
-             "\nFocus:"(player :focus) ;; TODO: Calculate max focus here?
-             "\nFocus Recharge Rate:"(player :focus-recharge-rate)
-             "\n\n"(list-player-owned-equipment player)
-             "\n\n"(list-player-skills player)
-             ;;TODO show task list here (or just current task)
-             ))
-             

@@ -42,32 +42,56 @@
   
   )
 
-
-(defn GUI-main-loop
-  "The main loop of the game. Responsible for coordinating everything"
+(defn main-menu-get-player-input
+  "at the main display, after listing player stats, get player input on what s/he wants to do."
   [player]
-  ;;;;;;;;;;
-  ;; Skills
-  ;;;;;;;;;;
-  ;; display skills you have
-  (list-player-skills player)
+  ;; what would you like to do?
+
   ;;(take input: "skills" brings you to skill-view/training-window)
 
-  ;; show current/queued tasks in an overview
-  (GUI-task-view player)
+  ;; "charge focus" brings you to the focus-buying screen
 
-  ;; show energy level
-  (println (statgraph (player :focus) 100))
-  ;; take input: charge
+  ;; "bank" or "money" brings you to the banking screen
 
-  ;; show player money
-  (println "Money:" (player :money))
-  ;; take input: bank
+  ;; "view/buy equipment" brings you to the proper equipment screen
+  ;; (list-available-equipment) or (list-player-owned-equipment
+  ;; player) -- somehow also incorporate (view-equipment-item-details)
+  ;; and (buy-equipment item)
+  
+  
+  
+  )
 
-  ;; show equipment
-  (list-player-owned-equipment player)
-  ;; take input: view or buy more equipment
 
-  ;; show overall player level
-  (GUI-show-player-level player)
+
+  (defn displaystats
+    "Display User Statistics"
+    [player]
+    (println "Your Stats:\n"
+             ;; show overall player level
+             (GUI-show-player-level player)
+             "\nTotal Points:"(player :total-points)
+             "\nMoney:"(player :money)
+             "\n\n"(list-player-owned-equipment player)
+             "\n\n"(list-player-skills player)
+                      
+             ;; show current/queued tasks in an overview
+             (GUI-task-view player)
+
+             ;; show energy level
+             (statgraph (player :focus) 100)
+             "\nFocus Recharge Rate:"(player :focus-recharge-rate)
+
+  ))
+
+
+
+(defn main-loop
+  "The main loop of the game. Responsible for coordinating everything"
+  [player]
+  (displaystats player)
+  
+  ;; take input from player
+  (main-menu-get-player-input)
+
   )
