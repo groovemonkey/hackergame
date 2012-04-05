@@ -1,9 +1,11 @@
 (ns hacker.player)
 (declare player)
 
-(defn load-player [player file]
-  (let [playermap (read-string (slurp (.getAbsolutePath file)))]
-    (conj player
+(defn load-player
+  "removed the (.getAbsolutePath method because it wasn't working) -- so, needs a full path to the file as an argument"
+  [file]
+  (let [playermap (read-string (slurp file))]
+    (conj {}
            {:name (:name playermap)
             :hacker-alias (:hacker-alias playermap)
             :background-story (:background-story playermap)
@@ -21,4 +23,4 @@
   "Set hacker.player/player to the map in the player file.  This is run only once at startup. Defaults to looking in data/player."
   ([dir]
      (def player (load-player dir)))
-  ([] (set-player "data/player")))
+  ([] (set-player "/home/dave/code/hacker/data/player")))

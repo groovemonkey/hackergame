@@ -76,3 +76,9 @@ DAY 2:
 -display player equipment
 -display player skills
 -display player stats
+
+##########
+Day 3:
+##########
+-CREATE MAIN gui FUNCTION
+-Stub out main loop

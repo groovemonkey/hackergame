@@ -5,8 +5,8 @@
 (use hacker.tasks)
 
 
-;;; This is where the main GUI loop runs, drawing functions and data
-;;; from the other files.
+;;; This is where the main GUI/game loop stuff runs, drawing functions
+;;; and data from the other source files.
 
 
 (defn GUI-task-view
@@ -84,14 +84,29 @@
 
   ))
 
+(defn player-quits
+  "returns true if player selects 'quit' in the player-input loop."
+  []
+  
 
+  )
+
+(defn initialize-game
+  "Initializes the game -- creates player, reads equipment, etc."
+  []
+  (set-player)
+
+  )
 
 (defn main-loop
   "The main loop of the game. Responsible for coordinating everything"
   [player]
+  (initialize-game)
+  (while (not player-quits)
   (displaystats player)
   
   ;; take input from player
   (main-menu-get-player-input)
 
-  )
+  ))
+
