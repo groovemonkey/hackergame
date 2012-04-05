@@ -1,0 +1,63 @@
+{
+:0 {
+:level-name "Tabula Rasa"
+:description "You have no idea that there's any kind of IT-criminal underworld. To suggest such a thing seems bizarre to you."
+:skill-points-required 0
+}
+
+:1 {
+:level-name "Openly Ridiculed"
+:description "Other hackers tell you that you're a moron. You're still trying to find out what 'FOADIAF' means, because you hear it all the time."
+:skill-points-required 10
+}
+
+:2 {
+:level-name "Secretly Ridiculed"
+:description "You have some friends now, but your enemies all insist that they're as moronic as you. Why are 'hackers' so mean!?"
+:skill-points-required 100
+}
+
+:3 {
+:level-name "Student"
+:description "You've got a mentor; someone well-respected in several communities who seems to know what he's doing. Proper spelling and grammar, internet etiquette, and other necessities are finally being addressed. This will help you tremendously in the long run."
+:skill-points-required 1000
+}
+
+:4 {
+:level-name "Contributor"
+:description "You're contributing to open-source projects that you like, and gaining some good karma doing it. The people you're bumping into now seem smarter and more emotionally balanced than your old friends. This is getting to be fun!"
+:skill-points-required 10000
+}
+
+:5 {
+:level-name "Popular"
+:description "More people than you know seem to know you. You've got a good reputation as a dedicated hacker, and you've always got some interesting projects happening."
+:skill-points-required 100000
+}
+
+:6 {
+:level-name "Insider"
+:description "People are starting to come to you for advice, and you're more than happy to give it. Some of your friends have gone to prison for computer crimes, but you're not discouraged. Even inside, they're still part of your ever-growing network."
+:skill-points-required 1000000
+}
+
+:7 {
+:level-name "Leader"
+:description "You change the course of discussions in the community. You lead projects. Your public work always seems to attract a lot of attention, and people are honored when you talk to them."
+:skill-points-required 10000000
+}
+
+:8 {
+:level-name "Godfather"
+:description "You have ears everywhere. Everyone knows about you, and you know people in every high, low, and somewhat elevated place. Governments figure you for some kind of organizer."
+:skill-points-required 100000000
+}
+
+:9 {
+:level-name ""
+:description "Equally feared and admired, you walk the land, spontaneously forming new connections and making advantageous business transactions wherever you go. You exude power and class, rubbing elbows with politicians, business leaders, and convicted felons with impunity. You *are* the underworld."
+:skill-points-required 1000000000
+}
+
+
+}

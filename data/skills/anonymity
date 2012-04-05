@@ -1,70 +1,43 @@
 {
-:anonymity {
 
-0 {:description "You love social networking! It's, like, ohmygod...*so* convenient LOL!!11!!"
+:0 {:level-name "Totally Clueless"
+:description "You love social networking! It's, like, ohmygod...*so* convenient LOL!!11!!"
 :skill-points-required 0}
 
-1 {:description "Some of your hacker friends are starting to tell you the same things over and over again, with a tired, sad look in their eyes. Get off the social networks, or feed them bogus data. Limit your exposure. Keep your privacy. Maybe you should listen."
+:1 {:level-name "Beginner"
+:description "Some of your hacker friends are starting to tell you the same things over and over again, with a tired, sad look in their eyes. Get off the social networks, or feed them bogus data. Limit your exposure. Keep your privacy. Maybe you should listen."
 :skill-points-required 10}
 
-2 {:description "You've done some checking around -- you even read through one of those social-media privacy policies -- and it seems that they're not just advertising to you -- they're selling your identity and all the private data they can get their hands on. Time to opt out."
+:2 {:level-name "Doubter"
+:description "You've done some checking around -- you even read through one of those social-media privacy policies -- and it seems that they're not just advertising to you -- they're selling your identity and all the private data they can get their hands on. Time to opt out."
 :skill-points-required 100}
 
-3 {:description "The more you research, the creepier it gets. Looks like the social networks are selling your private information to the government, which is getting creepier and more totalitarian every day. You're starting to think about 'going dark' on the Internet -- multiple non-intersecting identities, blasting your browser cache and information at regular intervals, even changing the way your browser/computer identifies itself to other nodes on the Internet."
+:3 {:level-name "Scared"
+:description "The more you research, the creepier it gets. Looks like the social networks are selling your private information to the government, which is getting creepier and more totalitarian every day. You're starting to think about 'going dark' on the Internet -- multiple non-intersecting identities, blasting your browser cache and information at regular intervals, even changing the way your browser/computer identifies itself to other nodes on the Internet."
 :skill-points-required 1000}
 
-4 {:description "You've become difficult to find, and extremely hard to track. Most of the information that comes up about your online activity is bogus, and you've muddied the social-media water enough to keep your computer-savviest friends from finding you. Time to start thinking about your offline identity."
+:4 {:level-name "Tinfoil Hat Believer"
+:description "You've become difficult to find, and extremely hard to track. Most of the information that comes up about your online activity is bogus, and you've muddied the social-media water enough to keep your computer-savviest friends from finding you. Time to start thinking about your offline identity."
 :skill-points-required 10000}
 
-5 {:description "What started with a faked library card has now become an entirely new identity. Finances, IDs, a passport from another country. Thanks to a bit of cracking, you've even arranged for a proper financial history, fake paper trail and everything...what? It's their own fault if they can't protect themselves from SQL injection!"
+:5 {:level-name "Umbrella Corporation"
+:description "What started with a faked library card has now become an entirely new identity. Finances, IDs, a passport from another country. Thanks to a bit of cracking, you've even arranged for a proper financial history, fake paper trail and everything...what? It's their own fault if they can't protect themselves from SQL injection!"
 :skill-points-required 100000}
 
-6 {:description "You're a regular Jason Bourne: you have identities all over the world, complete with bank accounts, post office boxes, and other trappings. You've now set up corporate structures to act on your behalf, using these new identities."
+:6 {:level-name "International Person Of Mystery"
+:description "You're a regular Jason Bourne: you have identities all over the world, complete with bank accounts, post office boxes, and other trappings. You've now set up corporate structures to act on your behalf, using these new identities."
 :skill-points-required 1000000}
 
-7 {:description "You are a ghost, operating with more flexibility, finesse, and privacy than many clandestine services."
+:7 {:level-name "Ghost"
+:description "You are a ghost, operating with more flexibility, finesse, and privacy than many clandestine services."
 :skill-points-required 10000000}
 
-8 {:description "You've faked your own death.  You can now find anyone, anywhere, anytime, while still being invisible. Using disguises and an automated identity system you created, you can be anyone. This is a government's worst nightmare - a person with total and complete freedom, and no accountability."
+:8 {:level-name "Dead Man Walking"
+:description "You've faked your own death.  You can now find anyone, anywhere, anytime, while still being invisible. Using disguises and an automated identity system you created, you can be anyone. This is a government's worst nightmare - a person with total and complete freedom, and no accountability."
 :skill-points-required 100000000}
 
-9 {:description "As far as any government, corporation, or private person is concerned, you do not exist. There's nothing more to it."
+:9 {:level-name "Invisible Man"
+:description "As far as any government, corporation, or private person is concerned, you do not exist. There's nothing more to it."
 :skill-points-required 1000000000}
 
-}
-}
-{
-:anonymity {
-
-:0 {:description "You love social networking! It's, like, ohmygod...*so* convenient LOL!!11!!"
-:skill-points-required 0}
-
-:1 {:description "Some of your hacker friends are starting to tell you the same things over and over again, with a tired, sad look in their eyes. Get off the social networks, or feed them bogus data. Limit your exposure. Keep your privacy. Maybe you should listen."
-:skill-points-required 10}
-
-:2 {:description "You've done some checking around -- you even read through one of those social-media privacy policies -- and it seems that they're not just advertising to you -- they're selling your identity and all the private data they can get their hands on. Time to opt out."
-:skill-points-required 100}
-
-:3 {:description "The more you research, the creepier it gets. Looks like the social networks are selling your private information to the government, which is getting creepier and more totalitarian every day. You're starting to think about 'going dark' on the Internet -- multiple non-intersecting identities, blasting your browser cache and information at regular intervals, even changing the way your browser/computer identifies itself to other nodes on the Internet."
-:skill-points-required 1000}
-
-:4 {:description "You've become difficult to find, and extremely hard to track. Most of the information that comes up about your online activity is bogus, and you've muddied the social-media water enough to keep your computer-savviest friends from finding you. Time to start thinking about your offline identity."
-:skill-points-required 10000}
-
-:5 {:description "What started with a faked library card has now become an entirely new identity. Finances, IDs, a passport from another country. Thanks to a bit of cracking, you've even arranged for a proper financial history, fake paper trail and everything...what? It's their own fault if they can't protect themselves from SQL injection!"
-:skill-points-required 100000}
-
-:6 {:description "You're a regular Jason Bourne: you have identities all over the world, complete with bank accounts, post office boxes, and other trappings. You've now set up corporate structures to act on your behalf, using these new identities."
-:skill-points-required 1000000}
-
-:7 {:description "You are a ghost, operating with more flexibility, finesse, and privacy than many clandestine services."
-:skill-points-required 10000000}
-
-:8 {:description "You've faked your own death.  You can now find anyone, anywhere, anytime, while still being invisible. Using disguises and an automated identity system you created, you can be anyone. This is a government's worst nightmare - a person with total and complete freedom, and no accountability."
-:skill-points-required 100000000}
-
-:9 {:description "As far as any government, corporation, or private person is concerned, you do not exist. There's nothing more to it."
-:skill-points-required 1000000000}
-
-}
 }

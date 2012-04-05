@@ -1,0 +1,43 @@
+{
+
+0 {:level-name "Total N00bzoid H4xx0r Dipshit"
+:description "You love Windows 2000, and can't imagine why anyone would want to upgrade or run anything else. I mean, you can run IE6 on it (which, according to its installer, is the fastest and most secure browsing experience available)! All these nerds need to shut up. You're fine."
+:skill-points-required 0}
+
+1 {:level-name "Ignoramus"
+:description "You've finally upgraded to the new Windows 23, running Firefox 10e^43. By software, people mean webapps, right?  What else is there? Ever since you installed this new Nortonne 'ye olde Firewalle' you feel fuzzy and safe inside. A friend gave you a copy of some automated tool that can break into computers or something, using some problems with old software or something. It's kind of cool, even though it only works once in a while."
+:skill-points-required 10}
+
+2 {:level-name "Script Kiddie"
+:description "You've heard a lot about this UNIX stuff, and have now switched. It's pretty cool -- stable, as safe as you make it, and endlessly customizable. Lots of small tools to learn, and they all make your life easier. There are also new point-and-click hacking tools out there, some of which work and others which don't. Weeding through the massive amount of tools is hard, but you're having more success than you used to."
+:skill-points-required 100}
+
+3 {:level-name "Curiously Incompetent"
+:description "You feel like you can get stuff done about ten or twenty times as fast as you could on other operating systems, and you find yourself forgoing the slick interface and using command-line tools more and more. Perhaps it's more important to be efficient and effective than it is to be pretty. You've written a few small shell scripts to tie together small hacking tools which others have written. You feel pretty fucking cool. Yes you do."
+:skill-points-required 1000}
+
+4 {:level-name "Dangerously Unskilled"
+:description "You're messing around with firewalls and network technology. Running exploits on outdated software is kind of fun, and occasionally you do it to piss off your friends and modify their hosts file to direct all browser traffic to goatse. This is fun! You can reliably compromise boxes; even some administrated systems."
+:skill-points-required 10000}
+
+5 {:level-name "Experienced Script Kiddie"
+:description "You're using more sophisticated, community-built 'penetration testing' tools now, and loving it. You can break into most non-administrated systems pretty quickly, and have no trouble getting into some small-business networks where the sysadmins made stupid decisions or left default settings on an old piece of hardware."
+:skill-points-required 100000}
+
+6 {:level-name "Half Human, Half Machine"
+:description "You've spent a lot of time reading RFCs and trying to understand how the underlying network protocols work, and have started writing a few scripts to take advantage of a small bug you found in a protocol. It's not widespread, but you can now get into some systems that seemed secure before. You've gotten your first look inside some larger business networks without being detected, and you've learned a lot from it."
+:skill-points-required 1000000}
+
+7 {:level-name "Serious Threat"
+:description "You know how the exploits work when you use them, and you've started discovering flaws on your own. You can write exploits reliably now, and have little trouble breaking into most reasonably secured networks now. Can't find a way in? You just social-engineer the sales team and send them an infected file. You're flexible, and have a solid overview of penetration. Companies would hire you as a senior pentester, but you're not interested."
+:skill-points-required 10000000}
+
+8 {:level-name "Bad, Bad Man"
+:description "You're advanced, you're persistent, and you're a threat. Oh, and you run a fairly large botnet so that you can make money, infect new computers, and run attacks on targets without being tracked down. Companies have risk assessment plans that can't quite account for people like you. You're unpredictable, use your own exploits, and are comfortable physically penetrating  corporate offices to subvert even complex network security. Free virus-loaded USB sticks for everyone!"
+:skill-points-required 100000000}
+
+9 {:level-name "Unstoppable Force"
+:description "You cannot be stopped. You can break into even the most highly-secured networks, and rumors about you abound. You're everywhere, but rarely detected. And you're never even *close* to being traced. The world is lucky that you're not after their powerplants, chemical facilities, and transportation systems. You are god of the networks, and the world cowers before you."
+:skill-points-required 1000000000}
+
+}

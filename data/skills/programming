@@ -1,44 +1,49 @@
-{;;skills file
-;;when modifying this file, also modify ~/src/hacker/skills.clj to add
-;;the new skill to the player object when it reads from this file.
-
 ;; this file stores the skill-levels and the points they require,
-;; along with their descriptions.  The player object keeps track of
-;; how many skill points it has for each of these, and what level the
-;; player is at.
+;; along with each level's name and description.  The player object keeps track of how many skill points it has for each of these, and what level the player is at.
 
-:programming {
-:0 {:description "What the hell is programming?"
+
+{
+:0 {:level-name "Clueless"
+:description "What the hell is programming?"
 :skill-points-required 0}
 
-:1 {:description "Programming is pretty cool.  You can...you know...get the computer to do stuff that you tell it.  And it's like a fun little logical puzzle.  Others play sudoku, you program little games.  Cool!"
+:1 {:level-name "Uninitialized"
+:description "Programming is pretty cool.  You can...you know...get the computer to do stuff that you tell it.  And it's like a fun little logical puzzle.  Others play sudoku, you program little games.  Cool!"
 :skill-points-required 10}
 
-:2 {:description "You're comfortable using BASIC."
+:2 {:level-name "Unskilled, But Trying"
+:description "You're comfortable using BASIC."
 :skill-points-required 100}
 
-:3 {:description "You've built a few small games and utilities. This programming stuff is cool!"
+:3 {:level-name "Enthusiastic"
+:description "You've built a few small games and utilities. This programming stuff is cool!"
 :skill-points-required 1000}
 
-:4 {:description "You know a few languages.  Python, Ruby, C++.  You can build useful stuff when you need it."
+:4 {:level-name "Competent-ish"
+:description "You know a few languages.  Python, Ruby, C++.  You can build useful stuff when you need it."
 :skill-points-required 10000}
 
-:5 {:description "You've built up a fairly large set of scripts and utilities that help you run your network -- and your life.  You're competent."
+:5 {:level-name "Proficient"
+:description "You've built up a fairly large set of scripts and utilities that help you run your network -- and your life.  You're competent."
 :skill-points-required 100000}
 
-:6 {:description "Hmmm, what's this LISP stuff? You're starting to discover functional programming, and rewriting your code library to make it more simple, elegant, and less prone to side effects."
+:6 {:level-name "Medium-Well"
+:description "Hmmm, what's this LISP stuff? You're starting to discover functional programming, and rewriting your code library to make it more simple, elegant, and less prone to side effects."
 :skill-points-required 1000000}
 
-:7 {:description "You're writing device drivers for hardware your friends build...when you're not busy modifying your operating system and discovering loopholes and flaws."
+:7 {:level-name "Mentor"
+:description "You're writing device drivers for hardware your friends build...when you're not busy modifying your operating system and discovering loopholes and flaws."
 :skill-points-required 10000000}
 
-:8 {:description "Welcome to badass-hacker land. You've discovered flaws in major software packages, operating systems, and hardware devices. You start mentally deconstructing complex systems almost as soon as you see them, whether it's a new piece of software or a city's transportation system. Making you angry is not a smart move."
+:8 {:level-name "Obsessive"
+:description "Welcome to badass-hacker land. You've discovered flaws in major software packages, operating systems, and hardware devices. You start mentally deconstructing complex systems almost as soon as you see them, whether it's a new piece of software or a city's transportation system. Making you angry is not a smart move."
 :skill-points-required 100000000}
 
-:9 {:description "You are a LISP god. Governments and large organizations develop contingency plans for you. Other hackers aspire to *be* you. You can write large systems without much trouble, and tend to get things right the first time. You can think of an easy way to accomplish almost anything."
+:9 {:level-name "Hacker"
+:description "You are a LISP god. Governments and large organizations develop contingency plans for you. Other hackers aspire to *be* you. You can write large systems without much trouble, and tend to get things right the first time. You can think of an easy way to accomplish almost anything."
 :skill-points-required 1000000000}
 
-:10 {:description "Apotheosis. You have merged with the machine."
+:10 {:level-name "Machine God"
+:description "Apotheosis. You have merged with the machine."
 :skill-points-required 10000000000}
-}
 }
