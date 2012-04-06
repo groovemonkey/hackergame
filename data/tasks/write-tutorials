@@ -1,0 +1,42 @@
+{
+:title "Publish Programming Tutorials Online"
+:description "You've been carefully saving up your programming notes, and now it's time to release some of them. There are plenty of people on the Internet who need help with a problem that you've already figured out, so just compile your notes, create some videos and screenshots to go along with the written material, and release it!"
+
+:completion-description "You've turned some of your notes into a tutorial and released it for free online. It looks like you really helped some people. On a happy note, it seems that you generated enough traffic to make a little bit of ad revenue!"
+
+;; minimum player level for task
+:task-level 1
+
+;; currency costs for this task
+:money-cost 0
+:focus-cost 50
+:hack-points 100
+
+;; rewards
+:payout-cash 100
+:payout-skillpoints {
+:programming 20
+:underworld-connections 5 
+}
+:payout-bonus 10
+
+;; requirements
+:skills-required {
+;;;;;;;;;;;;;;;;
+:programming 1 
+;;;;;;;;;;;;;;;;
+}
+
+;; equipment requirements, in the format "equipment class name" --> level
+;; (because we check for class/level most of the time)
+;; non-required stuff does NOT have to be listed as "0".
+:equipment-required {
+;;;;;;;;;;;;;;;;
+:computer []
+
+;; specific equipment requirements (by name) in a vector below
+:specifically []
+;;;;;;;;;;;;;;;;
+}
+
+}

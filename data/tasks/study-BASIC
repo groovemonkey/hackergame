@@ -1,0 +1,39 @@
+{
+:title "Study BASIC"
+:description "You have to start somewhere -- it might as well be here. This is a crappy language, but easy to learn. This could be fun!"
+
+:completion-description "You have a serious programming study session over the weekend, and find that you have a knack for programming. Your studies have gotten your creative juices flowing, and you have some pretty cool ideas that you can't wait to try out with your newfound knowledge."
+
+;; minimum player level for task
+:task-level 0
+
+;; currency costs for this task
+:money-cost 0
+:focus-cost 9
+:hack-points 5
+
+;; rewards
+:payout-cash 0
+:payout-skillpoints {
+:programming 10
+}
+:payout-bonus 0
+
+;; requirements
+:skills-required {} 
+;;;;;;;;;;;;;;;;
+}
+
+;; equipment requirements, in the format "equipment class name" --> level
+;; (because we check for class/level most of the time)
+;; non-required stuff does NOT have to be listed as "0".
+:equipment-required {
+;;;;;;;;;;;;;;;;
+:computer []
+
+;; specific equipment requirements (by name) in a vector below
+:specifically []
+;;;;;;;;;;;;;;;;
+}
+
+}

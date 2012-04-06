@@ -1,0 +1,42 @@
+{
+:title "Write A Small Computer Game"
+:description "You've had so many ideas for cool little games since you started programming: time to build one of them into something real. Break out the reference books and search engine; it's programming time!"
+
+:completion-description "You have successfully turned a glimmer of an idea into something real: a pretty sweet little game that you and your friends can play. Not only do you have the finished product to enjoy, but when you look back you realize how much you've had to learn to make it happen. You've gained some valuable programming skills, even though it just seemed like fun."
+
+;; minimum player level for task
+:task-level 1
+
+;; currency costs for this task
+:money-cost 0
+:focus-cost 100
+:hack-points 100
+
+;; rewards
+:payout-cash 0
+:payout-skillpoints {
+:programming 50
+:underworld-connections 5 
+}
+:payout-bonus 10
+
+;; requirements
+:skills-required {
+;;;;;;;;;;;;;;;;
+:programming 2
+;;;;;;;;;;;;;;;;
+}
+
+;; equipment requirements, in the format "equipment class name" --> level
+;; (because we check for class/level most of the time)
+;; non-required stuff does NOT have to be listed as "0".
+:equipment-required {
+;;;;;;;;;;;;;;;;
+:computer []
+
+;; specific equipment requirements (by name) in a vector below
+:specifically []
+;;;;;;;;;;;;;;;;
+}
+
+}

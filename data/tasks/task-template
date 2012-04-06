@@ -1,0 +1,42 @@
+{
+:title ""
+:description ""
+
+:completion-description ""
+
+;; minimum player level for task
+:task-level 
+
+;; currency costs for this task
+:money-cost 
+:focus-cost 
+:hack-points 
+
+;; rewards
+:payout-cash 
+:payout-skillpoints {
+:cracking 
+}
+:payout-bonus 
+
+;; requirements
+:skills-required {
+;;;;;;;;;;;;;;;;
+:cracking 
+:social-engineering 
+;;;;;;;;;;;;;;;;
+}
+
+;; equipment requirements, in the format "equipment class name" --> level
+;; (because we check for class/level most of the time)
+;; non-required stuff does NOT have to be listed as "0".
+:equipment-required {
+;;;;;;;;;;;;;;;;
+:computer 
+
+;; specific equipment requirements (by name) in a vector below
+:specifically []
+;;;;;;;;;;;;;;;;
+}
+
+}

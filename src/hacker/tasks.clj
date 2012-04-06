@@ -6,7 +6,9 @@
     (conj tasks
           {(keyword (.getName file))
            {:name (keyword (.getName file))
+            :title (:title thing)
             :description (:description thing)
+            :completion-description (:completion-description thing)
             :task-level (:task-level thing)
             :money-cost (:money-cost thing)
             :focus-cost (:focus-cost thing)
