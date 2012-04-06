@@ -1,0 +1,22 @@
+{
+:name "Let's not play games -- this thing is stolen. How you stole it -- it's the size of several washing machines -- is not up for discussion. Where it was stolen from is equally irrelevant. The only thing that matters is that this is the fastest, craziest, most high-end ride in town. We're talking magnitude-of-order faster than the next sucker down the line.  We're talking batshit, crazy-insane fast. The Quantum Rig uses superposition and quantum entanglement to make code run 10,000 times faster than one of these old-fashioned van Neumann machines on the market. Just don't look at the electricity bill."
+
+:type :computer
+:level 9
+:price 100000000
+
+;; compute/defense attributes
+:compute-speed 9999999
+:defense-value 0
+
+;; requirements (must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 100000
+:task-bonuses {}
+
+}

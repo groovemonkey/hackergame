@@ -1,0 +1,23 @@
+{
+:name "Island Lair"
+:description "Enough of the distractions of civilization. You're moving away from the city -- *far* away. You managed to get a great deal on a small island in the South Pacific, setting up a hacking compound and security systems that would make the old guy from Jurassic Park jealous. No, seriously -- you're being guarded by Velociraptors. The place came with your own helicopter and a network pipe larger than most countries' backbones. As you sit back and sip your Pina Colada, you realize that you've become one happy hacker."
+
+:type :hideout
+:level 5
+:price 20000000
+
+;; compute/defense attributes
+:compute-speed 20000
+:defense-value 45000
+
+;; requirements -must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 13000
+:task-bonuses {}
+
+}

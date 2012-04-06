@@ -1,0 +1,23 @@
+{
+:name "My Own PC"
+:description "Finally! You've scrounged up enough money to buy your very own computer. It wasn't the fastest box in the truck, but it'll do for now."
+
+:type :computer
+:level 1
+:price 230
+
+;; compute/defense attributes
+:compute-speed 10
+:defense-value 1
+
+;; requirements - must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 1
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 6
+:task-bonuses {:cracking-grandmas-passwd 20}
+
+}

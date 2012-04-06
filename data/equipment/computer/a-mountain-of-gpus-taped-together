@@ -1,0 +1,22 @@
+{
+:name "This is an abomination. But hey, it's fast. You've taken several old computer cases and filled them with linked GPUs. A single linux machine runs the whole thing as a computing cluster, and you achieve speeds that most people are paying ten times as much for. It's ugly, and there's a lot of duct tape showing...but shit, it works."
+
+:type :computer
+:level 4
+:price 20000
+
+;; compute/defense attributes
+:compute-speed 50000
+:defense-value 1500
+
+;; requirements (must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 60
+:task-bonuses {}
+
+}

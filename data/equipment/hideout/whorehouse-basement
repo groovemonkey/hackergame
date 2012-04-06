@@ -1,0 +1,23 @@
+{
+:name "The Basement of a Thai Whorehouse"
+:description "It's loud upstairs, and you hear things on a regular basis that shouldn't be heard by anyone. This isn't where you want to end up, but it's where you're starting. This place might be good enough for you to get some work done...as long you can ignore the horrifying stains on the carpet, the couch, the curtains, the sink, the...you know what? Let's just get the hell out of here as soon as possible."
+
+:type :hideout
+:level 0
+:price 0
+
+;; compute/defense attributes
+:compute-speed 1
+:defense-value 0
+
+;; requirements -must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 5
+:task-bonuses {}
+
+}

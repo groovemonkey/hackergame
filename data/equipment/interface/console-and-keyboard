@@ -1,0 +1,23 @@
+{
+:name "Console and Keyboard"
+:description "Now with twinkie wrappers! You've realized that there are better ways to communicate your needs to a computer than by ham-fistedly dragging a mouse around, aiming at certain microscopic sections of the screen, clicking around like a blind, idiotic child, and hoping for the best. Your initial horror at having to learn specific commands on a 'command line' has subsided and you've decided to study the 'linux' running underneath your glossy interface. As a result you're now 10-20 times faster than you were before. Congratulations. You're now a computer user."
+
+:type :interface
+:level 1
+:price 0
+
+;; compute/defense attributes
+:compute-speed 30
+:defense-value 30
+
+;; requirements (must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 15
+:task-bonuses {}
+
+}

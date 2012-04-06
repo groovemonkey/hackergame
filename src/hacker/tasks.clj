@@ -23,7 +23,6 @@
 in it. Files should be maps containing task data."
   (reduce load-task {} (.listFiles (java.io.File. dir))))
 
-;; TODO: load multiple items from subdirectories of /data/tasks
 (defn set-tasks
   "Set hacker.tasks/tasks to a map of tasks corresponding to each file
   in dir. Defaults to looking in data/tasks/."

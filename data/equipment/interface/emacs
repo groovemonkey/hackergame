@@ -1,0 +1,23 @@
+{
+:name "Emacs, Baby"
+:description "OK, enough fucking around. It's time to get serious about efficiency. This is a costly switch -- requiring several weeks of time for learning and adjustment -- but gradually you start using emacs for everything. It's an e-mail client. A calendar. An organizer and a notetaking program. An outliner, an Integrated Development Environment with all the bells and whistles, a blog posting app, chat software, a replacement for the OS command line. Once you've learned it, you've learned hundreds of programs -- the same keyboard shortcuts and commands work everywhere. It does everything short of sucking your cock and making you a sandwich...and you're starting to suspect there's a plugin for that."
+
+:type :interface
+:level 3
+:price 1000
+
+;; compute/defense attributes
+:compute-speed 200
+:defense-value 150
+
+;; requirements (must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 100
+:task-bonuses {}
+
+}
