@@ -21,6 +21,6 @@
 
 (defn set-player
   "Set hacker.player/player to the map in the player file.  This is run only once at startup. Defaults to looking in data/player."
-  ([dir]
-     (def player (load-player dir)))
+
+  ([dir] (def player (ref (load-player dir))))
   ([] (set-player "/home/dave/code/hacker/data/player")))

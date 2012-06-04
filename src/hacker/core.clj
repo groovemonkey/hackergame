@@ -1,13 +1,21 @@
-(ns hacker.core)
-(use hacker.commands)
-(use hacker.equipment)
-(use hacker.player)
-(use hacker.tasks)
-
+(ns hacker.core
+(:use hacker.equipment
+      hacker.commands
+      hacker.player
+      hacker.tasks
+      hacker.skills
+      ))
 
 ;;; This is where the main GUI/game loop stuff runs, drawing functions
 ;;; and data from the other source files.
-
+(defn initialize-game
+  "Creates player object, reads game data into memory"
+  []
+  (set-player)
+  (set-equipment)
+  (set-skills)
+  (set-tasks)
+  )
 
 (defn GUI-task-view
   "Put together the task view seen from the GUI. Current task + time-to-complete; task queue (max 5 items)."
@@ -88,25 +96,18 @@
   "returns true if player selects 'quit' in the player-input loop."
   []
   
-
   )
 
-(defn initialize-game
-  "Initializes the game -- creates player, reads equipment, etc."
-  []
-  (set-player)
-
-  )
-
-(defn main-loop
+(defn -main
   "The main loop of the game. Responsible for coordinating everything"
-  [player]
+  []
+  (do
   (initialize-game)
+
   (while (not player-quits)
   (displaystats player)
   
   ;; take input from player
   (main-menu-get-player-input)
 
-  ))
-
+  )))

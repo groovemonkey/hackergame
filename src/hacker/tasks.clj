@@ -30,4 +30,4 @@ in it. Files should be maps containing task data."
   in dir. Defaults to looking in data/tasks/."
   ([dir]
      (def tasks (load-all-tasks dir)))
-  ([] (set-equipment "data/tasks/")))
+  ([] (set-tasks "data/tasks/")))

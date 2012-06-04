@@ -29,15 +29,6 @@ Game Mechanics Needed (functions)
 
 *TASKS
 
-** Show Available Tasks
--list doable tasks based on task level (+1 level, greyed out).  Show selectable tasks based on required level, $, Focus, Equipment, Skills.
-
-** View a Task (by clicking on an available task)
--show task description, requirements, rewards, cost
-
-** Select a task (by choosing to perform that task in the task description menu)
--if there's no active task running, make the task active.  Otherwise, add the task to the end of the player's task queue -- verify skills/equipment are met, otherwise return an error explaining why this task isn't doable yet.
-
 ** Task Queue Management
 -view the whole queue, in its own GUI window
 -select tasks from the queue to view task details (same as from main menu)
@@ -82,3 +73,16 @@ Day 3:
 ##########
 -CREATE MAIN gui FUNCTION
 -Stub out main loop
+
+##########
+Day 4:
+##########
+
+** Show Available Tasks
+-list doable tasks based on task level (+1 level, greyed out).  Show selectable tasks based on required level, $, Focus, Equipment, Skills.
+
+** View a Task (by clicking on an available task)
+-show task description, requirements, rewards, cost
+
+** Select a task (by choosing to perform that task in the task description menu)
+-if there's no active task running, make the task active.  Otherwise, add the task to the end of the player's task queue -- verify skills/equipment are met, otherwise return an error explaining why this task isn't doable yet.

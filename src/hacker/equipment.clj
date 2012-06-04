@@ -1,5 +1,8 @@
-(ns hacker.equipment)
+(ns hacker.equipment
+  (:import java.io.File))
+
 (declare equipment)
+
 
 (defn load-equipment [equipment file]
   (let [thing (read-string (slurp (.getAbsolutePath file)))]
@@ -25,12 +28,20 @@
 in it. Files should be maps containing equipment data."
   (reduce load-equipment {} (.listFiles (java.io.File. dir))))
 
-;; TODO: load multiple items from subdirectories of /data/equipment
+
 (defn set-equipment
-  "Set hacker.equipment/equipment to a map of equipment corresponding to each file
-  in dir. This function should be used only once at mire startup, so
-  having a def inside the function body should be OK. Defaults to
-  looking in data/equipment/."
+  "Set hacker.equipment/equipment to a map of equipment corresponding to each file in dir."
   ([dir]
-     (def equipment (load-all-equipment dir)))
-  ([] (set-equipment "data/equipment/")))
+    (do
+      (def equipment (ref {}))
+       
+      (doseq [f (.listFiles dir)]
+        (if (.isDirectory f)    
+      ;; run code for each directory (ignores files in the main
+          ;; equipment dir)      
+      (dosync
+       (alter equipment merge (load-all-equipment (.getAbsolutePath f))))
+      ))))
+  
+  ([] (set-equipment (File. "data/equipment/"))))
+
