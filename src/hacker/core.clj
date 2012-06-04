@@ -30,7 +30,9 @@
   [current max]
   (println
   ;; display percentage
-  (/ current max)
+   (if (> current 0)
+     (/ current max)
+     (println "Zero Percent -- You got Nuthin'!"))
   ;; show a little ASCII bar-graph that represents the percentage
   
   ))
@@ -54,7 +56,7 @@
 
 (defn main-menu-get-player-input
   "at the main display, after listing player stats, get player input on what s/he wants to do."
-  [player]
+  []
   ;; what would you like to do?
 
   ;;(take input: "skills" brings you to skill-view/training-window)
@@ -68,8 +70,6 @@
   ;; player) -- somehow also incorporate (view-equipment-item-details)
   ;; and (buy-equipment item)
   
-
-  
   )
 
 
@@ -77,7 +77,9 @@
   (defn displaystats
     "Display User Statistics"
     [player]
-    (println "Your Stats:\n"
+    (println "player is " player "\n\n\n"
+
+     "Your Stats:\n"
              ;; show overall player level
              (GUI-show-player-level player)
              "\nTotal Points:"(player :total-points)
@@ -96,8 +98,11 @@
 (defn player-quits
   "returns true if player selects 'quit' in the player-input loop."
   []
-  
-  )
+  (println "\nDo you want to quit?\n")
+  (if (= (read-line) "y")
+    '(true)
+    nil
+  ))
 
 (defn -main
   "The main loop of the game. Responsible for coordinating everything"
@@ -105,16 +110,15 @@
   (do
   (initialize-game)
 
-  (while (not player-quits)
-    ;;FIXME: deref the player object?
-    (displaystats (player))
-
-    (println "DEBUG: You should have just seen your stats.")
-
-
+  (loop
+      []
+    (displaystats (deref player))
   
     ;; take input from player
-    (println "DEBUG: Getting your input...")
     (main-menu-get-player-input)
-    
-    (println "DEBUG: END OF LOOP"))))
+    (if (player-quits)
+      nil
+    (recur)))
+
+    (println "DEBUG: END OF LOOP")
+    ))
