@@ -11,10 +11,12 @@
 (defn initialize-game
   "Creates player object, reads game data into memory"
   []
+  (print "Initializing...")
   (set-player)
   (set-equipment)
   (set-skills)
   (set-tasks)
+  (print "Done!\n\n")
   )
 
 (defn GUI-task-view
@@ -66,7 +68,7 @@
   ;; player) -- somehow also incorporate (view-equipment-item-details)
   ;; and (buy-equipment item)
   
-  
+
   
   )
 
@@ -88,9 +90,8 @@
 
              ;; show energy level
              (statgraph (player :focus) 100)
-             "\nFocus Recharge Rate:"(player :focus-recharge-rate)
-
-  ))
+             "\nFocus Recharge Rate:"(player :focus-recharge-rate))
+  )
 
 (defn player-quits
   "returns true if player selects 'quit' in the player-input loop."
@@ -105,9 +106,15 @@
   (initialize-game)
 
   (while (not player-quits)
-  (displaystats player)
-  
-  ;; take input from player
-  (main-menu-get-player-input)
+    ;;FIXME: deref the player object?
+    (displaystats (player))
 
-  )))
+    (println "DEBUG: You should have just seen your stats.")
+
+
+  
+    ;; take input from player
+    (println "DEBUG: Getting your input...")
+    (main-menu-get-player-input)
+    
+    (println "DEBUG: END OF LOOP"))))

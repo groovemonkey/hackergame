@@ -1,4 +1,6 @@
-(ns hacker.tasks)
+(ns hacker.tasks
+  (:import java.io.File))
+
 (declare tasks)
 
 (defn load-task [task file]
@@ -18,7 +20,7 @@
             :payout-bonus (:payout-bonus thing)
             :skills-required (:skills-required thing)
             :equipment-required (:equipment-required thing)}})))
-            
+
 
 (defn load-all-tasks [dir]
   "Given a dir, return a map with an entry corresponding to each file
@@ -29,5 +31,12 @@ in it. Files should be maps containing task data."
   "Set hacker.tasks/tasks to a map of tasks corresponding to each file
   in dir. Defaults to looking in data/tasks/."
   ([dir]
-     (def tasks (load-all-tasks dir)))
-  ([] (set-tasks "data/tasks/")))
+     (do
+       (def tasks (ref {}))
+
+       (doseq [file (.listFiles dir)]
+       (dosync
+        (alter tasks merge (load-all-tasks (.getAbsolutePath file)))))))
+  
+  ([] (set-tasks (File. "data/tasks/"))))
+

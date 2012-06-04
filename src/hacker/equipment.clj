@@ -37,8 +37,7 @@ in it. Files should be maps containing equipment data."
        
       (doseq [f (.listFiles dir)]
         (if (.isDirectory f)    
-      ;; run code for each directory (ignores files in the main
-          ;; equipment dir)      
+      ;; run code for each directory (ignores files)      
       (dosync
        (alter equipment merge (load-all-equipment (.getAbsolutePath f))))
       ))))
