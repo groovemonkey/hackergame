@@ -77,7 +77,7 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
   (do
     (println "\n\nYour Skills:\n")
            (doseq [skill skills]
-             (println (first skill) ":" (rest skill) "--" (:level-name skill)))))
+             (println (first skill) ":" (rest skill) "\n" (get-in skills [(keyword skills) (keyword (rest skill))])))))
 
 
 
