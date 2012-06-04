@@ -10,7 +10,7 @@
            {:name (keyword (.getName file))
             :level-name (:level-name thing)
             :description (:description thing)
-            :skill-points-requierd (:skill-points-required thing)
+            :skill-points-required (:skill-points-required thing)
 }})))
 
 

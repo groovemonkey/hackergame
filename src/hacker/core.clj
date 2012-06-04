@@ -32,7 +32,7 @@
   (println
   ;; display percentage
    (if (> current 0)
-     (/ current max)
+     (println (/ current max)"%")
      (println "Zero Percent -- You got Nuthin'!"))
   ;; show a little ASCII bar-graph that represents the percentage
   
@@ -49,7 +49,7 @@
   "Shows a detailed view of the player's level: cute little graph, points to next level, requirements for next level, etc."
   [player]
   (println "Current Level:" (player :hacker-level)
-           "Progress to next level:" (statgraph (player :total-points)(calculate-next-level-points player :hacker-level)))
+           "\nProgress to next level:" (statgraph (player :total-points)(calculate-next-level-points player :hacker-level)))
   
   ;; show non-point requirements needed for next level (skills etc)
   
@@ -59,9 +59,11 @@
   (defn displaystats
     "Display User Statistics"
     [player]
-    (println "player is " player "\n\n\n"
-
-     "Your Stats:\n"
+    (println
+    "\nYour Stats:\n"
+    "\nName:" (player :name)
+    "\nHacker Alias:" (player :hacker-alias)
+    "\nBackground:" (player :background-story)
              ;; show overall player level
              (GUI-show-player-level player)
              "\nTotal Points:"(player :total-points)
@@ -73,9 +75,8 @@
              (GUI-task-view player)
 
              ;; show energy level
-             (statgraph (player :focus) 100)
-             "\nFocus Recharge Rate:"(player :focus-recharge-rate))
-  )
+             "\nYour Focus:" (statgraph (player :focus) 100)"%"
+             "\nFocus Recharge Rate:"(player :focus-recharge-rate)))
 
 (defn player-quits
   "returns true if player selects 'quit' in the player-input loop."
