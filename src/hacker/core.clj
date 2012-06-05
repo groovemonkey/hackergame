@@ -78,6 +78,7 @@
              "\nYour Focus:" (statgraph (player :focus) 100)"%"
              "\nFocus Recharge Rate:"(player :focus-recharge-rate)))
 
+
 (defn player-quits
   "returns true if player selects 'quit' in the player-input loop."
   []
@@ -86,6 +87,7 @@
     '(true)
     nil
   ))
+
 
 (defn -main
   "The main loop of the game. Responsible for coordinating everything"
@@ -98,7 +100,7 @@
     (displaystats (deref player))
 
     ;; take input from player
-    (main-menu-get-player-input)
+    (main-menu-get-player-input (deref player))
     (if (player-quits)
       nil
     (recur)))

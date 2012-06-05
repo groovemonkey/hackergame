@@ -1,34 +1,35 @@
 (ns hacker.commands
-  (:use [hacker equipment player tasks skills])
-  )
+;;  (:use [hacker equipment player tasks skills]))
+  (:use hacker.equipment
+   hacker.player
+   hacker.tasks
+   hacker.skills))
 
 
-
-;; TODO make permanent (mutable)                                              
 (defn player-toplevel-attr-change
   "Add (positive integer) or remove (negative integer) numeric attributes from the player map.  This is for things like total-points, hacker-level, money, focus, etc"
   [attr amount]
+  (dosync
   (assoc-in player [attr] (+ (player attr) amount))
-  )
+  ))
+
 
 ;; TODO: make this an actual validation -- right now everything that has some kind of requirement will fail.
 (defn buyable?
-  "A validation function that checks equipment stats against player stats, to make sure all the requirements for that item are met. Called by the buy-equipment function. We are checking skills, hideout, and equipment"
+  "A validation function that checks equipment stats against player stats, to make sure all the requirements for that item are met. Called by the buy-equipment function. We are checking skills, hideout, equipment, and price."
   [item]
   (and
        (empty? (item :skills-required))
        (empty? (item :hideout-required))
        (empty? (item :equipment-required)))
-
   )
 
 
-;; TODO make this permanent (currently immutable)
 (defn buy-equipment
   "Add a piece of equipment to player's equipment map.  Syntax: (buy-equipment <equipment-symbol>).  Must be called in a transaction."
   [item]
   (if (buyable? item)
-    (do
+    (dosync
     (assoc-in player [:equipment-owned (:type item)] item)
     (player-toplevel-attr-change :money (- (item :price))))))
 
@@ -79,12 +80,8 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
            (doseq [skill (get-in player-map [:skills])]
              (println "\n"(key skill) ":" (val skill)
                       "\nProficiency:" (get-in hacker.skills/skills [(key skill) (keyword (val skill)) :level-name])
-                      "\nDescription:" (get-in hacker.skills/skills [(key skill) (val skill) :description])
+                      "\nDescription:" (get-in hacker.skills/skills [(key skill) (val skill) :description])))))
 
-;;(get-in hacker.skills/skills [(first skill) (keyword (rest skill))])
-                      ))))
-
-;; I want name, level number, level name, description
 
 ;; get a player's skill in (for example) programming
 ;;  (get-in (deref player) [:skills :programming])
@@ -97,13 +94,6 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
 (defn view-task-queue
   "View the current task queue for player."
   [player]
-
-  )
-
-
-(defn remove-task-from-queue
-  "Remove a task from the player's queue."
-  [task player]
 
   )
 
@@ -150,8 +140,17 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
 (defn add-task-to-queue
   "Add a task to the player's queue. Performs a check (same as view-available-tasks) to verify that the task can actually be added to the queue."
   [task player]
+  
 
   )
+
+
+(defn remove-task-from-queue
+  "Remove a task from the player's queue."
+  [task player]
+
+  )
+
 
 (defn calculate-task-duration
   "Calculate duration for a task. This should work for both queued tasks (calculate at current skill/focus/etc. levels) and for an active task (calculate remaining time, etc)"
