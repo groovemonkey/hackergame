@@ -1,5 +1,5 @@
 (ns hacker.commands
-  (:use [hacker equipment player tasks])
+  (:use [hacker equipment player tasks skills])
   )
 
 
@@ -73,11 +73,24 @@ Hideout: "(if (empty? (item :hideout-required)) "None\n" (:hideout-required))
 
 (defn list-player-skills
   "Display a list of user skills.  Use map Destructuring."
-  [{:keys [skills] :as player-map}]
+  [player-map]
   (do
     (println "\n\nYour Skills:\n")
-           (doseq [skill skills]
-             (println (first skill) ":" (rest skill) "\n" (get-in skills [(keyword skills) (keyword (rest skill))])))))
+           (doseq [skill (get-in player-map [:skills])]
+             (println "\n"(key skill) ":" (val skill)
+                      "\nProficiency:" (get-in hacker.skills/skills [(key skill) (keyword (val skill)) :level-name])
+                      "\nDescription:" (get-in hacker.skills/skills [(key skill) (val skill) :description])
+
+;;(get-in hacker.skills/skills [(first skill) (keyword (rest skill))])
+                      ))))
+
+;; I want name, level number, level name, description
+
+;; get a player's skill in (for example) programming
+;;  (get-in (deref player) [:skills :programming])
+
+;; (get-in hacker.skills/skills [:anonymity :level-0])
+;; this has :level-name :description and :skill-points-required
 
 
 

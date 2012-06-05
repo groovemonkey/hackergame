@@ -4,13 +4,23 @@
 (declare skills)
 
 (defn load-skill [skills file]
-  (let [thing (read-string (slurp file))]
+  (let [thing (read-string (slurp (.getAbsolutePath file)))]
     (conj skills
           {(keyword (.getName file))
            {:name (keyword (.getName file))
-            :level-name (:level-name thing)
-            :description (:description thing)
-            :skill-points-required (:skill-points-required thing)
+            :0 (:0 thing)
+            :1 (:1 thing)
+            :2 (:2 thing)
+            :3 (:3 thing)
+            :4 (:4 thing)
+            :5 (:5 thing)
+            :6 (:6 thing)
+            :7 (:7 thing)
+            :8 (:8 thing)
+            :9 (:9 thing)
+;;            :level-name (:level-name thing)
+;;            :description (:description thing)
+;;            :skill-points-required (:skill-points-required thing)
 }})))
 
 

@@ -6,7 +6,7 @@
 
 
 ;;hacker-level needed?  Maybe just calculate from total-points?
-:hacker-level 0
+:hacker-level :0
 :total-points 0
 :focus-recharge-rate 10
 
@@ -25,13 +25,13 @@
 ;; skills
 :skills {
 ;;;;;;;;;;;;;;;;
-:programming 0
-:cracking 0
-:evasion 0
-:underworld-connections 0
-:anonymity 0
-:network-tech 0
-:social-engineering 0
+:programming :0
+:cracking :0
+:evasion :0
+:underworld-connections :0
+:anonymity :0
+:network-tech :0
+:social-engineering :0
 
 ;;;;;;;;;;;;;;;;
 }
