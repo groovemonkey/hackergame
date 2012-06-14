@@ -22,9 +22,10 @@
 (defn banking-menu
   ""
   [player]
-
-
-  )
+  (let [money (get-in player [:money])]
+    (println
+      "You have" money "credits available.\n\n")
+  ))
 
 
 (defn equipment-buy-menu
@@ -120,26 +121,38 @@ view - view your own equipment
              "\nFocus Recharge Rate:"(player :focus-recharge-rate)))
   
 
+(defn quit-menu
+  "returns true if player selects 'quit' in the player-input loop."
+  []
+  (println "\nDo you want to quit? (y or n)\n")
+  (if (= (read-line) "y")
+    '(true)
+    nil
+  ))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; MAIN MENU ;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn main-menu-get-player-input
   "at the main display, after listing player stats, get player input on what s/he wants to do."
   [player]
-  (println "What would you like to do?  Available commands are:
+  (println "\n##########################################
+What would you like to do?  Available commands are:\n
 player - view player stats
 quit - quit the game
 skills - view your skills
 focus - debug: do stuff with focus
 bank - check your finances
 money - check your finances
-equipment - view and buy equipment")
-
-(print "--> ")
+equipment - view and buy equipment
+\n--> ")
   
   (let [input (.toLowerCase (read-line))]
-    (println "DEBUG: You said " input)
         (case input
-          "quit" nil
+          "quit" (quit-menu)
           "skills" (skills-menu player)
           "focus" (focus-menu player)
           "bank" (banking-menu player)

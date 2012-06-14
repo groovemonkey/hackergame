@@ -5,6 +5,7 @@
       hacker.tasks
       hacker.skills
       hacker.userinput
+      hacker.database
       ))
 
 ;;; This is where the main GUI/game loop stuff runs, drawing functions
@@ -21,17 +22,6 @@
   )
 
 
-
-(defn player-quits
-  "returns true if player selects 'quit' in the player-input loop."
-  []
-  (println "\nDo you want to quit? (y or n)\n")
-  (if (= (read-line) "y")
-    '(true)
-    nil
-  ))
-
-
 (defn -main
   "The main loop of the game. Responsible for coordinating everything"
   []
@@ -43,9 +33,7 @@
 
     ;; take input from player
     (main-menu-get-player-input (deref player))
-    (if (player-quits)
-      nil
     (recur)))
 
     (println "DEBUG: END OF LOOP")
-    ))
+    )
