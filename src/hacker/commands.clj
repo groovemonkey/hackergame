@@ -18,10 +18,11 @@
 (defn buyable?
   "A validation function that checks equipment stats against player stats, to make sure all the requirements for that item are met. Called by the buy-equipment function. We are checking skills, hideout, equipment, and price."
   [item]
-  (and
-       (empty? (item :skills-required))
-       (empty? (item :hideout-required))
-       (empty? (item :equipment-required)))
+;;  (and
+;;       (empty? (item :skills-required))
+;;       (empty? (item :hideout-required))
+;;       (empty? (item :equipment-required)))
+true
   )
 
 

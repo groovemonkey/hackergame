@@ -1,5 +1,6 @@
 {
-:name "This is an abomination. But hey, it's fast. You've taken several old computer cases and filled them with linked GPUs. A single linux machine runs the whole thing as a computing cluster, and you achieve speeds that most people are paying ten times as much for. It's ugly, and there's a lot of duct tape showing...but shit, it works."
+:name "A Mountain of GPUs Taped Together"
+:description "This is an abomination. But hey, it's fast. You've taken several old computer cases and filled them with linked GPUs. A single linux machine runs the whole thing as a computing cluster, and you achieve speeds that most people are paying ten times as much for. It's ugly, and there's a lot of duct tape showing...but shit, it works."
 
 :type :computer
 :level 4

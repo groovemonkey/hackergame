@@ -13,7 +13,7 @@
 ;; equipment that the player has
 :equipment-owned {
 ;;;;;;;;;;;;;;;;
-:computer []
+:computer [moms-pc]
 :interface []
 :augmentation []
 :hideout []

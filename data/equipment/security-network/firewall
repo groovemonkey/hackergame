@@ -1,0 +1,23 @@
+{
+:name "Samson Z380 Firewall"
+:description "Time to put something between your computer and your modem: this firewall -- a sleek and sexy little cube with a blinking blue light -- should keep out the script-kiddies and casual attackers. You have no idea what the blue light does, but it looks totally rad, so you don't ask too many questions."
+
+:type :security-network
+:level 1
+:price 100
+
+;; compute/defense attributes
+:compute-speed 0
+:defense-value 150
+
+;; requirements (must be keys, i.e. skills: {:cracking 0, :anonymity 10}
+:hideout-required []
+:player-level-required 0
+:skills-required {}
+:equipment-required []
+
+;; task and general bonuses for having this item
+:general-bonus 100
+:task-bonuses {}
+
+}
